@@ -16,22 +16,17 @@ import com.khs.model.Project;
 import com.khs.service.ProjectService;
 
 @Controller
-@RequestMapping( value = "/foos" )
+@RequestMapping( value = "/projects" )
 class ProjectController{
  
    @Autowired
    ProjectService service;
  
    
-   @RequestMapping(value ="/name", method = RequestMethod.GET )
+   @RequestMapping(value ="/name/{name}", method = RequestMethod.GET )
    @ResponseBody
-   public Project findByName(){
-       
-	   Project proj = new Project();
-	   proj.setName("foo");
-	   proj.setHours(100.00f);
-	   
-	   return proj;
+   public Project findByName(@PathVariable("name") String name){      
+	  return service.findByName(name);
    }
    
    
