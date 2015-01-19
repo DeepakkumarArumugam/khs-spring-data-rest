@@ -1,0 +1,32 @@
+
+*.class
+
+.DS_Store
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# IntelliJ Files #
+/.idea/
+
+# Eclipse Files #
+.springBeans
+.project
+.classpath
+.settings
+
+# Maven Folder #
+target/
+/bin
+
+# Vagrant Folders #
+.vagrant/
+
+/.ssh/
+
+# Node, Grunt #
+/node_modules/
+/build/
+
