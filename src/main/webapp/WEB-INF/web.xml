@@ -3,7 +3,7 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>Spring MVC and Spring DATA example app</display-name>
   
   <!-- Declare a Spring MVC DispatcherServlet as usual -->
     <servlet>
@@ -21,7 +21,7 @@
             and fully-qualified @Configuration classes -->
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>com.khs.config.AppConfig,com.khs.config.WebAppConfig</param-value>
+            <param-value>com.khs.config.AppConfig</param-value>
         </init-param>
     </servlet>
 

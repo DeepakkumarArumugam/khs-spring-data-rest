@@ -34,7 +34,7 @@ class ProjectController{
    @ResponseBody
    public List<Project> findAll(){
       return service.findAll();
-   }
+   } 
  
    @RequestMapping( value = "/{id}", method = RequestMethod.GET )
    @ResponseBody

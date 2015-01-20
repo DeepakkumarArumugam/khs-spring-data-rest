@@ -24,6 +24,7 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 @EnableTransactionManagement
 @PropertySource("classpath:database.properties")
 @EnableJpaRepositories("com.khs.repository")
+@EnableWebMvc
 public class AppConfig {
 
 	private static final String DATABASE_DRIVER = "db.driver";

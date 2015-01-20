@@ -1,0 +1,75 @@
+<html>
+<script src="libs/jquery-1.7.2.js"></script>
+
+<p> Example Test Harness for Spring MVC Restful API </p>
+
+<!-- <input type="button" value="POST" onclick="javascript:create({name: 'foo', hours: 1000.00 })"/> -->
+
+<h2>POST API</h2>
+
+<p>API</p>
+<input type="input" id="url" value="api/projects"/>
+</p>
+<p>JSON</p>
+<p>
+<textarea id="data" rows="4" cols="50">{"name": "IT", "hours": 200.00}</textarea>
+</p>
+<input type="button" value="POST" onclick="javascript:create()"/>
+
+<h2>GET API</h2>
+
+<p>API</p>
+
+<input type="input" id="geturl" value="api/projects"/>
+
+<p>
+<input type="button" value="GET" onclick="javascript:get()"/>
+</p>
+
+<textarea id="results" rows="5" cols="50"></textarea> 
+
+
+<script>
+var create = function() {
+	
+	var data = $('#data').html();
+	var url = $('#url').val();
+	
+	
+    return jQuery.ajax({
+    headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' 
+    },
+    'type': 'POST',
+    'url': url,
+    'data': JSON.stringify(JSON.parse(data)),
+    'dataType': 'json',
+    'success': function(data) {  alert('Object Created'); }
+    });
+};
+
+
+var get = function() {
+	
+	var results = $('#results');
+	var url = $('#geturl').val();
+
+    return jQuery.ajax({
+    headers: { 
+        'Accept': 'application/json',
+        'Content-Type': 'application/json' 
+    },
+    'type': 'GET',
+    'url': url,
+    'dataType': 'json',
+    'success': function(data) {  results.html(JSON.stringify(data)) }
+    });
+};
+
+</script>
+
+</html>
+
+
+
