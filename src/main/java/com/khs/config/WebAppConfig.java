@@ -8,10 +8,10 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-
-@Configuration
-@EnableWebMvc
-@ComponentScan(basePackages="com.codetutr")
+/*   Currently not being used */
+//@Configuration
+//@EnableWebMvc
+//@ComponentScan(basePackages="com.codetutr")
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 
 	/**

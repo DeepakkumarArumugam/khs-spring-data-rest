@@ -60,7 +60,5 @@ public class Project {
 	public void setResources(List<ProjectResource> resources) {
 		this.resources = resources;
 	}
-	
-	
-	
+
 }
