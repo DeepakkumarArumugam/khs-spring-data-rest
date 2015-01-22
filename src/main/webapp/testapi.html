@@ -32,11 +32,12 @@
 <script>
 var create = function() {
 	
-	var data = $('#data').html();
+	var data = $('#data').val();
 	var url = $('#url').val();
 	
 	
     return jQuery.ajax({
+    cache: false,
     headers: { 
         'Accept': 'application/json',
         'Content-Type': 'application/json' 
