@@ -16,16 +16,13 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-
 
 @Configuration
-@ComponentScan(basePackages = "com.khs")
+@ComponentScan(basePackages = {"com.khs.model","com.khs.service","com.khs.repository"})
 @EnableTransactionManagement
 @PropertySource("classpath:database.properties")
 @EnableJpaRepositories("com.khs.repository")
-@EnableWebMvc
-public class AppConfig {
+public class AppTestConfig {
 
 	private static final String DATABASE_DRIVER = "db.driver";
 	private static final String DATABASE_PASSWORD = "db.password";

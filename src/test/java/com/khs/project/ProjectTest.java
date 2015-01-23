@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
-import com.khs.config.AppConfig;
+import com.khs.config.AppTestConfig;
 import com.khs.model.Project;
 import com.khs.service.ProjectService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = AppConfig.class, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = AppTestConfig.class, loader = AnnotationConfigContextLoader.class)
 public class ProjectTest {
 
 	@Autowired
